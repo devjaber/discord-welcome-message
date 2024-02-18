@@ -6,10 +6,15 @@ welcome message for discord server in python - with image
 
 
 | Install this pip to run the code  | 
-| :-------- | 
-| `pip install discord.py`|
-| `pip install pillow` |
-| `pip install requests`|
 
+```bash
+  pip install discord.py
+```
+```bash
+  pip install pillow
+```
+```bash
+  pip install requests
+```
 
  - [My official website ](http://jaberkohistani.com/)
