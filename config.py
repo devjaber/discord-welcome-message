@@ -1,3 +1,5 @@
-TOKEN = 'MTEwOTI3MTI2NzY1NzM5NjIzNA.GVa6Ty.GMl33P5tyn4TC3LT8wlMNwjuczRqUA1ZiJOVak'
-CHANNEL_ID = 1105970059500859482
+dev-jaber-kohistani = jaberkohistani.com
+
+TOKEN = 'your-bot-token'
+CHANNEL_ID = 0000000000000000 //channel-id-here
 FONT_PATH = 'BRLNSDB.TTF'
