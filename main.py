@@ -2,6 +2,7 @@ import discord
 from PIL import Image, ImageDraw, ImageFont
 from config import TOKEN, CHANNEL_ID, FONT_PATH
 import requests
+#jaberkohistani.com
 
 intents = discord.Intents.default()
 intents.guilds = True
@@ -15,8 +16,6 @@ async def on_member_join(member):
     username = member.name
     user_mention = member.mention
 
-    
-
     avatar_url = member.avatar.url
     avatar_image = Image.open(requests.get(avatar_url, stream=True).raw).convert('L') 
 
@@ -24,8 +23,7 @@ async def on_member_join(member):
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0) + avatar_image.size, fill=255)
     avatar_image.putalpha(mask)
-    background_image = Image.open('C:/Users/jaber/OneDrive/Desktop/io-project/py/welcome/background_image.png').convert('RGBA')
-
+    background_image = Image.open('background_image.png').convert('RGBA')
 
     welcome_message = f'{username}'
     preview_image = Image.alpha_composite(background_image, Image.new('RGBA', background_image.size, (0, 0, 0, 0)))
@@ -37,7 +35,7 @@ async def on_member_join(member):
     draw = ImageDraw.Draw(preview_image)
     draw.text((200, 200), welcome_message, fill=(48, 48, 48), font=font)
 
-    preview_image_path = f'C:/Users/jaber/OneDrive/Desktop/io-project/user-img/{username}.png'
+    preview_image_path = f'user-img/{username}.png'
     preview_image.save(preview_image_path)
 
     channel = client.get_channel(CHANNEL_ID)
