@@ -23,7 +23,7 @@ async def on_member_join(member):
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0) + avatar_image.size, fill=255)
     avatar_image.putalpha(mask)
-    background_image = Image.open('background_image.png').convert('RGBA')
+    background_image = Image.open('background.png').convert('RGBA')
 
     welcome_message = f'{username}'
     preview_image = Image.alpha_composite(background_image, Image.new('RGBA', background_image.size, (0, 0, 0, 0)))
